@@ -72,15 +72,15 @@ class CheckScratchcards extends Command
 
             $numbers = explode('|', $cardNum[1]);
 
-            $winners = array_map('intval', array_filter(explode(' ', trim($numbers[0]))));
+            $winning = array_map('intval', array_filter(explode(' ', trim($numbers[0]))));
             $yours = array_map('intval', array_filter(explode(' ', trim($numbers[1]))));
 
-            sort($winners);
+            sort($winning);
             sort($yours);
 
             $cards[] = [
                 'card' => $card,
-                'winners' => $winners,
+                'winning' => $winning,
                 'yours' => $yours
             ];
         }
@@ -89,7 +89,7 @@ class CheckScratchcards extends Command
     }
 
     /**
-     * Calculate points for each card based on the number of matches between winners and yours.
+     * Calculate points for each card based on the number of matches between winning and yours.
      * 
      * @param string $json
      * @return string
@@ -103,7 +103,7 @@ class CheckScratchcards extends Command
 
         foreach($cards as &$card) {
             $points = 0;
-            $matches = array_intersect($card['winners'], $card['yours']);
+            $matches = array_intersect($card['winning'], $card['yours']);
             $numMatches = count($matches);
 
             for($i = 1; $i <= $numMatches; $i++) {

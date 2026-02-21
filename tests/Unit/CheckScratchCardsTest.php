@@ -51,27 +51,27 @@ class CheckScratchCardsTest extends TestCase
         return json_encode([
             [
                 'card' => '1',
-                'winners' => [17, 41, 48, 83, 86],
+                'winning' => [17, 41, 48, 83, 86],
                 'yours' => [6, 9, 17, 31, 48, 53, 83, 86]
             ],
             [
                 'card' => '2',
-                'winners' => [2, 13, 16, 20, 32],
+                'winning' => [2, 13, 16, 20, 32],
                 'yours' => [2, 13, 16, 20, 24, 32, 61, 97]
             ],
             [
                 'card' => '3',
-                'winners' => [1, 21, 44, 53, 59],
+                'winning' => [1, 21, 44, 53, 59],
                 'yours' => [4, 16, 17, 36, 63, 69, 72, 82]
             ],
             [
                 'card' => '4',
-                'winners' => [41, 69, 73, 84, 92],
+                'winning' => [41, 69, 73, 84, 92],
                 'yours' => [14, 36, 39, 59, 69, 76, 84, 92]
             ],
             [
                 'card' => '5',
-                'winners' => [16, 23, 26, 66, 87],
+                'winning' => [16, 23, 26, 66, 87],
                 'yours' => [6, 16, 26, 40, 45, 66, 88, 91]
             ]
         ], JSON_PRETTY_PRINT);
