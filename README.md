@@ -13,15 +13,20 @@ cd scratchcards
 ```
 composer install
 ```
-3. Checkout branch:
+3. If needed set up environment:
+```
+cp .env.example .env
+php artisan key:generate
+```
+4. Checkout branch:
 ```
 git checkout feature_scratchcards_3
 ```
-4. Run the command:
+5. Run the command:
 ```
 php artisan check:scratchcards
 ```
-5. Run the tests:
+6. Run the tests:
 ```
 php artisan test
 ```
